@@ -1,9 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<section class="about-area pd-top-120 pd-bottom-90">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="thumb mb-lg-0 mb-4">
+                        <img src="/assets/img/other/about.png" alt="img">
+                    <div class="container">
+                    <div class="row justify-content-center">
+                    <div class="container">
+   
+                    </div>
+                </div>
+            </div>
+                        </div>
+        </div>
+        <div class="col-md-4 justify-content-center">
+        <div class="">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -69,5 +83,5 @@
             </div>
         </div>
     </div>
-</div>
+    </section>
 @endsection

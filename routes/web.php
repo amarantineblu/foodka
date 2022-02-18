@@ -25,3 +25,19 @@ Route::get('/users', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/update-profile', 'HomeController@updateProfile')->name('update-profile');
+
+Route::get('/add-food', 'FoodController@addFood')->name('add-food');
+Route::get('/all-food','HomeController@allFood')->name('all-food');
+Route::post('/upload-food','FoodController@upload')->name('food.upload');
+Route::get('/add-address','AddressController@addAddress')->name('add.address');
+
+Route::post('/upload-address','AddressController@upload')->name('address.upload');
+
+Route::get('/add-complains','ComplainController@addComplains')->name('add.complain');
+Route::post('/upload-complains','ComplainController@upload')->name('complain.upload');
+
+
+
+
+//
