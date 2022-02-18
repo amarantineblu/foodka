@@ -24,7 +24,7 @@
 
     <div class="col-md-8">
             <h4> Hello, {{ Auth::user()->name}} </h4>
-            <form action="{{route('food.upload')}}" method="POST">@csrf
+            <form action="{{route('food.upload')}}" method="POST" enctype="multipart/form-data">@csrf
                 <h3>Add Food</h3>
                 <label for="name">Name</label> <br>
                 <input type="text" name="name" class="form-control"> <br> <br>
