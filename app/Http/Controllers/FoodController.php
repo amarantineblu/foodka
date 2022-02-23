@@ -30,4 +30,11 @@ class FoodController extends Controller
 
         return back();
     }
+    public function allFood()
+    {
+        $food = Food::where('user_id','=', Auth::user()->id )->latest()->get();
+
+        return view('all-food', compact('foods'));
+    }
+    
 }

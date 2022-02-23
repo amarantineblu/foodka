@@ -10,15 +10,21 @@ class ComplainController extends Controller
 {
     public function addComplains()
     {
-        return view('add_complain');
+        return view('add_complains');
     }
     public function upload (Request $request)
     {
-        $complain = new complain();
+        $complain = new Complain();
         $complain->message = $request->message;
         $complain->user_id = Auth::user()->id;
         $complain->save();
 
         return back();
+    }
+    public function allComplain()
+    {
+        $complains = complain::where('user_id','=', Auth::user()->id )->latest()->get();
+
+        return view('all-complain', compact('complains'));
     }
 }

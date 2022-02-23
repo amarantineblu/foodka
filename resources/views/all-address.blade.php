@@ -20,28 +20,25 @@
     </div>
 </div>
 <div class="col-md-8" style="border-bottom: 200px; margin:30px">
-    <div class="all-foods">
+    <div class="all-address">
+        <h1>All Addresses</h1>
         <div class="card">
             <table class="table">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Image</th>
-                        <th>Date</th>
+                        <th>State</th>
+                        <th>Street</th>
+                        <th>City</th>
                     </tr>
                 </thead>
                     <tbody>
-                        @foreach ($foods as $food)
+                        @foreach ($address as $address)
                         <tr>
-                            <td>{{$food->id}}</td>
-                            <td>{{$food->name}}</td>
-                            <td>{{$food->price}}</td>
-                            <td>{{$food->description}}</td>
-                            <td><img src="/storage/foods/{{$food->image}}" alt="" width="50px" srcset=""></td>
-                            <td>{{$food->created_at}}</td>
+                            <td>{{$address->id}}</td>
+                            <td>{{$address->state}}</td>
+                            <td>{{$address->street}}</td>
+                            <td>{{$address->city}}</td>
                         </tr>
                         @endforeach
                     </tbody>
