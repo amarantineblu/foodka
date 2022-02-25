@@ -174,39 +174,41 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                @foreach ($foods as $food)
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-item-wrap">
-                        <div class="thumb">
-                            <img src="/storage/foods/{{$food->image}}" >
-                            <a class="fav-btn" href="#"><i class="ri-heart-line"></i></a>
-                        </div>
-                        <div class="wrap-details">
-                            <h5><a href="single-product.html">{{$food->name}}</a></h5>
-                            <div class="wrap-footer">
-                                <div class="rating">
-                                    4.9
-                                    <span class="rating-inner">
-                                        <i class="ri-star-fill ps-0"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-fill"></i>
-                                        <i class="ri-star-half-line pe-0"></i>
-                                    </span>
-                                    (200)
+
+                <div class="row justify-content-center">
+                    @foreach ($foods as $food)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-item-wrap">
+                            <div class="thumb">
+                                <img src="/storage/foods/{{$food->image}}" >
+                                <a class="fav-btn" href="#"><i class="ri-heart-line"></i></a>
+                            </div>
+                            <div class="wrap-details">
+                                <h5><a href="single-product.html">{{$food->name}}</a></h5>
+                                <div class="wrap-footer">
+                                    <div class="rating">
+                                        4.9
+                                        <span class="rating-inner">
+                                            <i class="ri-star-fill ps-0"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-line pe-0"></i>
+                                        </span>
+                                        (200)
+                                    </div>
+                                    <h6 class="price">{{$food->price}}</h6>
                                 </div>
-                                <h6 class="price">{{$food->price}}</h6>
+                            </div>
+                            <div class="btn-area">
+                                <a class="btn btn-secondary" href="{{route('food-content')}}">CHOOSE OPTIONS </a>
                             </div>
                         </div>
-                        <div class="btn-area">
-                            <a class="btn btn-secondary" href="single-product.html">CHOOSE OPTIONS </a>
-                        </div>
                     </div>
-                </div>
-                @endforeach
+                    @endforeach
 
-            </div>
+                </div>
+
         </div>
     </section>
     <!-- populer Area End -->

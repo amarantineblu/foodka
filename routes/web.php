@@ -24,7 +24,7 @@ Route::get('/users', function () {
 });
 
 Auth::routes();
-
+Route::get('/food-content', 'FoodController@foodContent')->name('food-content');
 Route::post('/upload-food', 'WelcomeController@welcome')->name('upload-food');
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -32,6 +32,9 @@ Route::post('/update-profile', 'HomeController@updateProfile')->name('update-pro
 
 Route::get('/add-food', 'FoodController@addFood')->name('add-food');
 Route::get('/all-food','FoodController@allFood')->name('all-food');
+Route::get('/food/edit/{title}/{id}','FoodController@edit')->name('food.edit');
+Route::put('/update/food/{food}','FoodController@update')->name('food.update');
+
 Route::post('/upload-food','FoodController@upload')->name('food.upload');
 Route::get('/add-address','AddressController@addAddress')->name('add.address');
 Route::get('/all-address','AddressController@allAddress')->name('all-address');

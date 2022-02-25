@@ -31,6 +31,7 @@
                         <th>Description</th>
                         <th>Image</th>
                         <th>Date</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                     <tbody>
@@ -42,6 +43,10 @@
                             <td>{{$food->description}}</td>
                             <td><img src="/storage/foods/{{$food->image}}" alt="" width="50px" srcset=""></td>
                             <td>{{$food->created_at}}</td>
+                            <td>
+                                <a href="{{route('food.edit',[$food->name, $food->id])}}" class="btn btn-primary btn-sm">Edit Food</a>
+                                <a href="" class="btn btn-danger btn-sm">Delete Food</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
